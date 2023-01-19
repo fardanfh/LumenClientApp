@@ -25,7 +25,7 @@ class EmployeesController extends Controller
 
     public function getById(Request $request)
     {
-        $url = 'https://dummy.restapiexample.com/api/v1/employee/3';
+        $url = 'https://dummy.restapiexample.com/api/v1/employee/1';
 		$headers = ['Accept: application/json'];
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -65,13 +65,13 @@ class EmployeesController extends Controller
 
     public function update(Request $request)
     {
-        $url = 'https://dummy.restapiexample.com/api/v1/update/3491';
+        $url = 'https://dummy.restapiexample.com/api/v1/update/1';
 		$headers = ['Accept: application/json'];
         $data = [
             "name" => "Fardan Faturrahman",
 			"salary" => "2500000",
 			"age" => "21",
-            "id" => "3491"
+            "id" => "1"
         ];
         $dataquery = http_build_query($data);
 		$dataJSON = json_encode($data);
